@@ -134,13 +134,3 @@ th, td {
   padding: 0.6rem 0.8rem;
 }
 
-/* スマホで横幅がきつくなりすぎないように */
-@media (max-width: 600px) {
-  body {
-    padding: 16px;
-  }
-  table {
-    min-width: 100%;
-    font-size: 0.9rem;
-  }
-}
