@@ -3,78 +3,139 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="style.css" rel="stylesheet">
     <title>ゆうのポートフォリオ</title>
+    <meta name="description" content="宮崎在住の大学1年生・ゆうのポートフォリオサイト。プロフィール、スキルセット、これまでの活動、好きな動画や作品などをまとめています。">
+    <link href="style.css" rel="stylesheet">
   </head>
   <body>
-    <h1>ゆう</h1>
-        <img src="icon.jpg">
+    <div class="container">
+      <header class="site-header">
+        <div class="header-inner">
+          <div class="profile-main">
+            <img src="icon.jpg" alt="ゆうのアイコン" class="profile-icon">
+            <div class="profile-text">
+              <h1>ゆう</h1>
+              <p class="profile-lead">
+                宮崎在住の大学1年生です。<br>
+                将来は IT マネジメントや海外での仕事に関わりたいと考えています。<br>
+                Web 開発を中心に、プログラミング、Docker、Flutter なども勉強中です。
+              </p>
+            </div>
+          </div>
+        </div>
+      </header>
 
-    <h2>About</h2>
-    <p>
-      宮崎在住の大学1年生です。<br>
-      将来は IT マネジメントや海外での仕事に関わりたいと考えています。<br>
-      Web 開発を中心に、プログラミング、Docker、Flutter なども勉強中です。
-    </p>
+      <main>
+        <section class="section" id="about">
+          <h2>About</h2>
+          <p>
+            情報・IT分野を学びながら、将来は海外とも関わりのある仕事を目指しています。<br>
+            学業と並行して、個人での学習や制作物のアウトプットにも取り組んでいます。
+          </p>
+        </section>
 
-    <h3>Profile</h3>
-    <ul>
-      <li>名前：ゆう（優斗）</li>
-      <li>所在地：宮崎県</li>
-      <li>得意領域：Web 開発入門（HTML / CSS / JavaScript）、IT・英語学習、基礎的なPC操作</li>
-    </ul>
+        <section class="section" id="profile">
+          <h3>Profile</h3>
+          <ul>
+            <li>名前：ゆう（優斗）</li>
+            <li>所在地：宮崎県</li>
+            <li>得意領域：Web 開発入門（HTML / CSS / JavaScript）、IT・英語学習、基礎的なPC操作</li>
+          </ul>
+        </section>
 
-    <h3>Skills</h3>
-    <table>
-      <tr>
-        <th>OS</th>
-        <td>Windows 11</td>
-      </tr>
-      <tr>
-        <th>Language</th>
-        <td>HTML, CSS, JavaScript（学習中）, Python（基礎）</td>
-      </tr>
-      <tr>
-        <th>Engine, Frameworks</th>
-        <td>Bootstrap（デザインフレームワーク入門）, Flutter（勉強予定）</td>
-      </tr>
-      <tr>
-        <th>Tool, Middleware</th>
-        <td>Git / GitHub（基礎的な操作）, VS Code, Docker（興味あり・学習中）</td>
-      </tr>
-      <tr>
-        <th>資格・免許</th>
-        <td>普通自動車免許（MT） ほか、IT・英語系資格取得に向けて勉強中</td>
-      </tr>
-    </table>
+        <section class="section" id="skills">
+          <h3>Skills</h3>
+          <table>
+            <tr>
+              <th>OS</th>
+              <td>Windows 11</td>
+            </tr>
+            <tr>
+              <th>Language</th>
+              <td>HTML, CSS, JavaScript（学習中）, Python（基礎）</td>
+            </tr>
+            <tr>
+              <th>Engine / Frameworks</th>
+              <td>Bootstrap（デザインフレームワーク入門）, Flutter（勉強予定）</td>
+            </tr>
+            <tr>
+              <th>Tool / Middleware</th>
+              <td>Git / GitHub（基礎的な操作）, VS Code, Docker（興味あり・学習中）</td>
+            </tr>
+            <tr>
+              <th>資格・免許</th>
+              <td>普通自動車免許（MT） ほか、IT・英語系資格取得に向けて勉強中</td>
+            </tr>
+          </table>
+        </section>
 
+        <section class="section" id="history">
+          <h3>History</h3>
+          <p>学歴、アルバイト経験、これまでの主な活動など。</p>
+          <table>
+            <tr>
+              <th>2025年</th>
+              <td>大学入学（情報・IT系分野を専攻）</td>
+            </tr>
+            <tr>
+              <th>2024年</th>
+              <td>通信制高校を卒業し、本格的にプログラミングと英語の学習を開始</td>
+            </tr>
+            <tr>
+              <th>2023年〜</th>
+              <td>ラーメン店でのアルバイトを通じて接客・店舗運営を経験</td>
+            </tr>
+            <tr>
+              <th>20XX年</th>
+              <td>今後の表彰・受賞歴や制作物の掲載を目指して活動中</td>
+            </tr>
+          </table>
+        </section>
 
+        <section class="section" id="favorite-video">
+          <h3>好きな動画</h3>
+          <div class="card media-card">
+            <div class="media-embed">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/guDJvZp5Bqk?si=QQOI9wbetTmu1wme"
+                title="お気に入りのYouTube動画"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen>
+              </iframe>
+            </div>
+            <p class="media-caption">
+              日常の作業中や休憩時間によく見る、お気に入りの動画です。
+            </p>
+          </div>
+        </section>
 
-    <h3>History</h3>
-    <p>学歴、アルバイト経験、これまでの主な活動など。</p>
-    <table>
-      <tr>
-        <th>2025年</th>
-        <td>大学入学（情報・IT系分野を専攻）</td>
-      </tr>
-      <tr>
-        <th>2024年</th>
-        <td>通信制高校を卒業し、本格的にプログラミングと英語の学習を開始</td>
-      </tr>
-      <tr>
-        <th>2023年〜</th>
-        <td>ラーメン店でのアルバイトを通じて接客・店舗運営を経験</td>
-      </tr>
-      <tr>
-        <th>20XX年</th>
-        <td>今後の表彰・受賞歴や制作物の掲載を目指して活動中</td>
-      </tr>
-    </table>
-    <h3>好きな動画</h3>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/guDJvZp5Bqk?si=QQOI9wbetTmu1wme" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <section class="section" id="openprocessing">
+          <h3>Open Processing</h3>
+          <p>授業や個人学習で作成したビジュアル作品の一例です。</p>
+          <div class="card media-card">
+            <div class="media-embed">
+              <iframe
+                src="https://openprocessing.org/sketch/2805802/embed/"
+                width="400"
+                height="400"
+                title="OpenProcessingで制作した作品">
+              </iframe>
+            </div>
+            <p class="media-caption">
+              Processing / p5.js を使って、インタラクティブな表現やアニメーションの制作に取り組んでいます。
+            </p>
+          </div>
+        </section>
+      </main>
 
-        <h3>Open Processing</h3>
-    <iframe src="https://openprocessing.org/sketch/2805802/embed/" width="400" height="400"></iframe>
-    
+      <footer class="site-footer">
+        <p>&copy; 2025 ゆう</p>
+      </footer>
+    </div>
   </body>
 </html>
+
