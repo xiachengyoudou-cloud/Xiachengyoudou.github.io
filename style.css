@@ -3,7 +3,8 @@
 -------------------- */
 
 :root {
-  --theme-color: #00a0a0;
+  /* テーマカラーを少しだけ青寄りに変更 */
+  --theme-color: #008cba;
 }
 
 * {
@@ -19,6 +20,14 @@ body {
   margin: 0;
   padding: 30px;
   color: #333;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f5f7fb; /* うっすらグレー寄りの背景 */
+  line-height: 1.6;
+}
+
+/* 本文を少し読みやすくする */
+p {
+  margin: 0 0 1rem;
 }
 
 /* --------------------
@@ -28,6 +37,21 @@ body {
 h1, h2, h3 {
   color: var(--theme-color);
   border-bottom: dashed 0.1em var(--theme-color);
+  padding-bottom: 0.3em;
+  margin-top: 1.8rem;
+  margin-bottom: 0.8rem;
+}
+
+/* h1だけ少し大きくしてトップ感を出す */
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 0;
+}
+
+/* h2は少しだけ目立たせる */
+h2 {
+  font-size: 1.4rem;
 }
 
 /* --------------------
@@ -37,6 +61,12 @@ h1, h2, h3 {
 a {
   color: var(--theme-color);
   text-decoration: none;
+  transition: opacity 0.2s ease, text-decoration 0.2s ease;
+}
+
+a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
 }
 
 /* --------------------
@@ -45,10 +75,28 @@ a {
 
 ul {
   list-style: none;
+  padding-left: 0;
+  margin: 0 0 1rem;
 }
+
+li {
+  position: relative;
+  padding-left: 1.2em;
+  margin-bottom: 0.4rem;
+}
+
 li:before {
   content: "★";
   color: var(--theme-color);
+  position: absolute;
+  left: 0;
+  top: 0.1em;
+  font-size: 0.8em;
+}
+
+/* ネストされたリストは★を少し小さくしてサブ感を出す */
+li ul li:before {
+  font-size: 0.7em;
 }
 
 /* --------------------
@@ -58,20 +106,41 @@ li:before {
 table {
   border-spacing: 0;
   border-collapse: collapse;
-  border: solid 1px #f0f0f0;
+  border: solid 1px #e5e5e5;
   min-width: 70%;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+  margin-bottom: 1.5rem;
 }
+
 tr {
   background-color: #fff;
 }
+
 tr:nth-child(2n) {
-  background-color: #f9f9f9;
+  background-color: #f9fafc;
 }
+
 th {
   background: var(--theme-color);
   color: #fff;
+  white-space: nowrap;
 }
+
 th, td {
   border: solid 1px #f0f0f0;
-  padding: 0.5rem;
+  padding: 0.6rem 0.8rem;
+}
+
+/* スマホで横幅がきつくなりすぎないように */
+@media (max-width: 600px) {
+  body {
+    padding: 16px;
+  }
+  table {
+    min-width: 100%;
+    font-size: 0.9rem;
+  }
 }
